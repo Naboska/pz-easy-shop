@@ -1,4 +1,4 @@
-import {AppBar, Box, Toolbar, Typography} from '@mui/material';
+import {AppBar, Toolbar, Typography} from '@mui/material';
 import {ReactNode} from "react";
 
 type TLayout = {
@@ -14,13 +14,11 @@ export const Layout = ({headerActions, children}: TLayout) => {
           <Typography
             variant="h6"
             component="div"
-            sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}}
+            sx={{flexGrow: 1}}
           >
             PZ-EASY-SHOP
           </Typography>
-          <Box sx={{display: {xs: 'none', sm: 'block'}}}>
-            {headerActions}
-          </Box>
+          {headerActions}
         </Toolbar>
       </AppBar>
       {children}
